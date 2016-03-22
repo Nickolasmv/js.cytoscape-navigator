@@ -642,4 +642,4 @@
     $( cy.container() ).cytoscapeNavigator( options );
   });
 
-})(jQuery, cytoscape)
+})(jQuery, cytoscape);
