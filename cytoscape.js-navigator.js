@@ -21,12 +21,14 @@
 
   , _init: function ( element, options ) {
       var that = this
+      var cy = options.cy;
 
       this.$element = $(element)
-      this.options = $.extend(true, {}, $.fn.cytoscapeNavigator.defaults, options)
+      this.options = $.extend(true, {}, $.fn.cytoscapeNavigator.defaults, options)     
 
-      that.$element.cytoscape(function(){
-        that.cy = that.$element.cytoscape('get')
+
+      cy(function(){
+        that.cy = cy;
 
         // Cache bounding box
         that.boundingBox = that.cy.elements().boundingBox()
