@@ -26,8 +26,7 @@
       this.$element = $(element)
       this.options = $.extend(true, {}, $.fn.cytoscapeNavigator.defaults, options)     
 
-cy = cy || options.cy;
-      cy(function(){
+      cy.batch(function(){
         that.cy = cy;
 
         // Cache bounding box
